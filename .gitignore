@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-.secret
-.infuraid
-config.js
+# .secret
+# .infuraid
+# config.js
 local-config.js
 mainnet-config.js
 # dependencies
@@ -50,4 +50,4 @@ artifacts
 
 .nvmrc
 
-.env
+# .env
