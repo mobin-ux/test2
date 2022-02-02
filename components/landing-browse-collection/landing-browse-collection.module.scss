@@ -1,0 +1,55 @@
+.item {
+    .by {
+        color: rgba(55, 63, 81, 0.6);
+    }
+    & > div {
+        width: 68%;
+    }
+    &Text{
+        color: rgba(55, 63, 81, 0.6);
+    }
+    & > img {
+        top: 32%;
+        border-radius: 100%;
+        width: 115px;
+        height: 115px;
+        object-fit: cover;
+        left: 15%;
+
+
+        // @media screen and (max-width:500px) {
+        //     top: 42%;
+        //     left: 5%;
+        // }
+        // @media screen and (max-width:380px) {
+        //     top: 30%;
+        //     left: 5%;
+        // }
+    }
+}
+@media screen and (max-width:1024px) {
+.item {
+    justify-content: center;
+    & > img {
+            top: 60%;
+            left: 10%;
+            @media screen and (max-width:700px) {
+                top: 55%;
+                left: 10%;
+            }
+            @media screen and (max-width:550px) {
+                top: 45%;
+                left: 10%;
+            }
+            @media screen and (max-width:450px) {
+                top: 37%;
+                left: 5%;
+            }
+            @media screen and (max-width:360px) {
+                top: 28%;
+                left: 2%;
+            }
+        }
+    }
+    
+}

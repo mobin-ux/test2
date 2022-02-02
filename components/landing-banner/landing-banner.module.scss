@@ -1,0 +1,61 @@
+.component {
+  position: relative;
+}
+
+.bgDesktop {
+  background-image: url("/img/BG.png");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 750px;
+  
+}
+.w77 {
+  width:31.625rem;
+  border-radius: 10px;
+  & > div:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.bgMobile {
+  background-image: url("/img/BG.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 720px;
+  @media screen and(max-width:1024px) {
+    & > div > div:first-child {
+      order: 2;
+      margin-top: 24px;
+    }
+  }
+  .backgroudnImageCart {
+    height: 330px;
+  }
+  .matic {
+    width: 93px;
+    height: 93px;
+    right: 10%;
+    top: 0;
+  }
+}
+
+.matic {
+  position: absolute;
+  width: 206px;
+  right: 10%;
+  top: 27%;
+  transform: rotate(24deg);
+}
+.backgroudnImageCart {
+  background-image: url("/img/header-landing-image-cart.png");
+  width: 100%;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  height: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

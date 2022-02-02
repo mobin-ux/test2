@@ -1,0 +1,18 @@
+.container {
+    @media screen and (max-width: 1024px) {
+        width: 97%;
+    }
+    .yellowLine{
+        right: -20% !important;
+        top: -5% !important;
+    }
+    .blueLine {
+        bottom: -15%;
+    }
+}
+.yellowLine {
+    right: -3%;
+}
+.blueLine {
+    left: -5%;
+}

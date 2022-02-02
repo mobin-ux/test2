@@ -1,0 +1,1 @@
+export { LandingBanner as default } from './landing-banner'

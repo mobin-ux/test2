@@ -1,0 +1,1 @@
+export { TransferNft as default } from './transfer-nft';

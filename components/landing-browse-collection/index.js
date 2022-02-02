@@ -1,0 +1,1 @@
+export { LandingBrowseCollection as default } from './landing-browse-collection'

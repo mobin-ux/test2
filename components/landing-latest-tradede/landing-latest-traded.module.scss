@@ -1,0 +1,39 @@
+
+.itemContainer {
+    height: 340px;
+    position: relative;
+}
+.itemContainer .cover{
+    border-radius: 10px;
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 0;
+    left: 0;
+}
+.itemContent {
+  z-index: 2;
+  width: 95%;
+  height: 95%;
+  & > div {
+    box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    img {
+      border-radius: 10px;
+      border: 1px solid rgba(55, 63, 81, 0.1);
+      box-sizing: border-box;
+      box-shadow: inset 0px 0px 12px #ffffff;
+    }
+    span {
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

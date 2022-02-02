@@ -1,0 +1,1 @@
+export { LandingLatestNfts as default } from './landing-latest-nfts'

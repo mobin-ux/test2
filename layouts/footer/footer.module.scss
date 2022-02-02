@@ -1,0 +1,208 @@
+@use "sass:map";
+$text-color-navy: #0f3080;
+$text-color-azure: #36a3da;
+@mixin size($width, $height: null) {
+  @if $width and $height {
+    width: $width;
+  }
+  @if $height and $height {
+    height: $height;
+  }
+  @if $width and $height == null {
+    width: $width;
+    height: $width;
+  }
+}
+
+
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font($color: null, $font-size: null, $font-weight: null, $line-height: null) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+.footer {
+  background: #fafafa;
+  padding: 64px 0 64px;
+
+  margin-top: 50px;
+
+  .container {
+    @include flex(flex-start, space-between);
+    background-image: none;
+    background-position: center 10em;
+    background-repeat: no-repeat;
+  }
+
+  .footer_logo {
+    .copy {
+      margin: 0 0 62px;
+    }
+
+    .logo {
+      width: 204px;
+      height: 66px;
+      display: block;
+      font-size: 0;
+      background: url(/img/payrue-logo-text.svg) no-repeat center center/cover;
+    }
+
+    p {
+      margin: 16px 0 0;
+      max-width: 299px;
+      @include font($text-color-navy, 15px, 400, 1.6);
+    }
+
+    select {
+      background: #f1f1f1;
+    }
+  }
+
+  .footer_content {
+    padding: 24px 0 0;
+    max-width: 640px;
+
+    p.support {
+      @include font($text-color-navy, 20px, 400, 1.6);
+
+      a {
+        margin-left: 10px;
+        color: $text-color-azure;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .links_external {
+    margin: 32px 0;
+    font-size: 0;
+
+    @include flex(center, flex-start);
+    gap: 32px;
+    @media screen and (max-width: 767px) {
+      gap: 8px;
+    }
+      
+    a {
+      display: inline-block;
+      vertical-align: top;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      svg {
+        fill: $text-color-navy;
+      }
+    }
+  }
+
+  .links_internal {
+    display: flex;
+
+    .section:not(:last-child) {
+      margin: 0 74px 0 0;
+    }
+
+    a {
+      margin: 0 0 8px;
+      display: block;
+      @include font($text-color-navy, 15px, 400, 1.6);
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 100px;
+    .container {
+      flex-direction: column;
+    }
+    .footer_logo {
+      width: 100%;
+      @include flex(center, space-between);
+
+      .copy {
+        margin: 0;
+      }
+    }
+    .footer_content {
+      width: 100%;
+      max-width: none;
+      margin: 70px 0 0;
+      padding: 0;
+    }
+    .links_external {
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    padding: 46px 0 60px;
+    .footer_logo {
+      .copy {
+        width: 100%;
+
+        .logo {
+          margin: 0 auto;
+          @include size(136px, 44px);
+        }
+
+        p {
+          max-width: none;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+
+      .lang {
+        display: none;
+      }
+    }
+    .footer_content {
+      margin: 30px 0 0;
+
+      p.support {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+    .links_external {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+
+      a {
+        margin: 14px !important;
+      }
+    }
+    .links_internal {
+      flex-direction: column;
+
+      .section:not(:last-child) {
+        margin: 0 0 40px;
+      }
+
+      a {
+        text-align: center;
+      }
+    }
+  }
+}

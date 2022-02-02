@@ -1,0 +1,1 @@
+export { LandingLatestTradede as default } from './landing-latest-tradede'
